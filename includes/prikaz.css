@@ -1,0 +1,223 @@
+/*Test na zeleni veji*/
+/* Card --------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+    .card-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.card {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 10px;
+    -moz-box-shadow: 0px 0px 10px 0px #cbcac5;
+    -webkit-box-shadow: 0px 0px 10px 0px #cbcac5;
+    box-shadow: 0px 0px 10px 0px #cbcac5;
+    font-family: "Poppins";
+    padding: 10px 15px;
+	margin-bottom: 10px;
+}
+
+@-moz-document url-prefix() {
+    select {
+        font-weight: 500 !important;    
+    }  
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+		padding: 10px 0 5px;
+		box-shadow: none;
+		margin-bottom: 0;
+		background-color: transparent;
+    }
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+	position: relative;
+}
+
+
+/* Logo --------------------------------------------------------------------- */
+.img-logo {
+    object-fit: contain;
+    height: 30px;
+	width: 110px;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 480px) {
+    .img-logo {
+        margin: 5px 8px 5px 0;
+		height: 25px;
+		width: 91px;
+    }
+}
+
+/* Calculation -------------------------------------------------------------- */
+.calculation {
+    display: flex;
+    align-items: center;
+}
+
+.loan-term {
+    position: relative;
+    margin-right: 8px;
+} 
+
+select {
+    appearance: none !important;
+    background-color: #F8F9FB !important;
+    border: none !important;
+    border-radius: 15px !important;
+    padding: 10px 15px !important;
+    margin: 0 !important;
+    color: #009FDA !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: inherit;
+    line-height: 1 !important;
+    outline: none !important;
+    width: 140px;
+    cursor: pointer;
+	min-height: 0 !important;
+	background-image: none;
+  }
+
+@media screen and (max-width: 480px) {
+    select {
+        font-size: 14px !important;
+		padding: 9px 14px !important;
+		width: 125px;
+    }
+}
+
+select:focus {
+	box-shadow: none;
+}
+  
+.loan-term {
+    position: relative;
+} 
+  
+.loan-term .caret {
+    width: 13px;
+    position: absolute;
+    right: 15px;
+    top: 11px;
+    pointer-events: none;
+    fill: #009FDA;
+}
+
+@media screen and (max-width: 480px) {
+    .loan-term .caret {
+        top: 9px;
+		right: 10px;
+    }
+}
+
+.icon-times {
+    color: #009FDA;
+    font-weight: 600;
+    line-height: 1;
+    margin-right: 8px;
+}
+
+.term-amount {
+    color: #009FDA;
+    font-weight: 600;
+    line-height: 1;
+    margin-right: 8px;
+	font-size: 16px;
+	width: 70px;
+}
+
+@media screen and (max-width: 480px) {
+    .term-amount {
+        font-size: 14px;
+		width: 60px;
+    }
+}
+
+/* Footer ------------------------------------------------------------------- */
+.footer {
+    font-family: "Poppins";
+    text-align: left;
+    font-size: 10px;
+    line-height: 1.2;
+    opacity: 0.8;
+	margin-bottom: 10px;
+	background-color: transparent !important;
+} 
+
+@media screen and (min-width: 481px) {
+    .footer {
+        display: none;
+    }
+}
+  
+
+
+/* Tooltip -------------------------------------------------------------------*/
+.tooltip {
+    position: relative;
+    margin-left: 8px;
+    top: 2px;
+}
+
+@media screen and (max-width: 480px) {
+    .tooltip {
+        display: none;
+    }
+}
+  
+.tooltip svg {
+    fill: #8DA4AF;
+    width: 15px;
+    height: 15px;
+    opacity: 0.8;
+}
+  
+  .tooltip::after {
+    content: 'Možnost plačila na obroke tudi za tujce in upokojence. Brez pologa. Brez skritih stroškov.';
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;
+    display: none;
+    padding: 8px 12px;
+    position: absolute;
+    text-align: center;
+    z-index: 999;
+    font-size: 12px;
+    line-height: 1.4;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 10px));
+    width: 200px;
+  }
+  
+  .tooltip::before {
+    background-color: #333;
+    content: ' ';
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+  }
+  
+  .tooltip:hover::after {
+    display: block;
+  }
+  
+  .tooltip:hover::before {
+    display: block;
+  }
+  
